@@ -1,0 +1,144 @@
+<ion-view title="Room Editor" id="page27">
+    <ion-content padding="true" class="has-header">
+        <form class="list">
+            <label class="item item-input">
+                <span class="input-label">Name</span>
+                <input type="text" placeholder="rm_1">
+            </label>
+        </form>
+        <div style="line-height: 250px; border: 1px solid rgb(238, 238, 238); border-radius: 3px; text-align: center; background-color: rgb(255, 255, 255);">
+            <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Settings</div>
+            <div class="item item-body">
+                <form class="list">
+                    <label class="item item-input">
+                        <span class="input-label">Caption</span>
+                        <input type="text" placeholder="0">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Width</span>
+                        <input type="text" placeholder="0">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Height</span>
+                        <input type="text" placeholder="0">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Speed</span>
+                        <input type="text" placeholder="0">
+                    </label>
+                    <ion-toggle toggle-class="toggle-positive">Persistent</ion-toggle>
+                </form>
+                <button id="roomEditor-button27" class="button button-positive  button-block">Creation Code</button>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Grid</div>
+            <div class="item item-body">
+                <form class="list">
+                    <ion-toggle toggle-class="toggle-positive" ng-checked="true">Show Grid</ion-toggle>
+                    <label class="item item-input">
+                        <span class="input-label">X</span>
+                        <input type="text" placeholder="0">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Y</span>
+                        <input type="text" placeholder="0">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Width</span>
+                        <input type="text" placeholder="32">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Height</span>
+                        <input type="text" placeholder="32">
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Tile Layers</div>
+            <div class="item item-body">
+                <div class="button-bar"></div>
+                <a ui-sref="tileEditor" id="roomEditor-button28" class="button button-positive  button-block">Add Layer</a>
+                <ion-list>
+                    <ion-item class="item-thumbnail-left" ui-sref="tileEditor">
+                        <img>
+                        <h2>Layer 0</h2>
+                        <p>3 Tiles</p>
+                    </ion-item>
+                    <ion-item class="item-thumbnail-left" ui-sref="tileEditor">
+                        <img>
+                        <h2>Layer 1000</h2>
+                        <p>1 Tile</p>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Background</div>
+            <div class="item item-body">
+                <div class="button-bar"></div>
+                <form class="list">
+                    <ion-toggle toggle-class="toggle-positive">Background Color</ion-toggle>
+                </form>
+                <form class="list">
+                    <label class="item item-input">
+                        <span class="input-label">Color</span>
+                        <input type="text" placeholder="FFFFFF">
+                    </label>
+                </form>
+                <a ui-sref="roomBackgroundEditor" id="roomEditor-button29" class="button button-positive  button-block">Add Background</a>
+                <ion-list>
+                    <ion-item class="item-thumbnail-left" ui-sref="roomBackgroundEditor">
+                        <img>
+                        <h2>Background 0</h2>
+                        <p>Visible Foreground</p>
+                    </ion-item>
+                    <ion-item class="item-thumbnail-left" ui-sref="roomBackgroundEditor">
+                        <img>
+                        <h2>Background 1</h2>
+                        <p>Visible</p>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Views</div>
+            <div class="item item-body">
+                <div class="button-bar"></div>
+                <form class="list">
+                    <ion-toggle toggle-class="toggle-positive">Enable Views</ion-toggle>
+                </form>
+                <a ui-sref="viewEditor" id="roomEditor-button30" class="button button-positive  button-block">Add View</a>
+                <ion-list>
+                    <ion-item class="item-thumbnail-left" ui-sref="viewEditor">
+                        <img>
+                        <h2>View 0</h2>
+                        <p>X:0 Y:0 W:0 H:0</p>
+                    </ion-item>
+                    <ion-item class="item-thumbnail-left" ui-sref="viewEditor">
+                        <img>
+                        <h2>View 1</h2>
+                        <p>X:0 Y:0 W:0 H:0</p>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Instances</div>
+            <div class="item item-body">
+                <a ui-sref="instanceEditor" id="roomEditor-button13" class="button button-positive  button-block">New Instance</a>
+                <ion-list>
+                    <ion-item class="item-thumbnail-left" ui-sref="instanceEditor">
+                        <img>
+                        <h2>Obj_block</h2>
+                        <p>12 instances</p>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

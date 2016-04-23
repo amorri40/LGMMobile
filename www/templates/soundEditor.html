@@ -1,0 +1,104 @@
+<ion-view title="Sound Editor" id="page8">
+    <ion-content padding="true" class="has-header">
+        <div class="list card">
+            <div class="item item-divider">Sound</div>
+            <div class="item item-body">
+                <ion-list>
+                    <ion-item class="item-thumbnail-left">
+                        <img>
+                        <h2>Play Sound</h2>
+                        <p>0:00</p>
+                    </ion-item>
+                    <ion-item>Load sound</ion-item>
+                </ion-list>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Details</div>
+            <div class="item item-body">
+                <form class="list">
+                    <label class="item item-input">
+                        <span class="input-label">Name:</span>
+                        <input type="text" placeholder="snd_1">
+                    </label>
+                    <ion-toggle toggle-class="toggle-positive">Preload</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive">Compressed</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive">Streamed</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive">Decompress on Load</ion-toggle>
+                </form>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Playback Settings</div>
+            <div class="item item-body">
+                <form class="list">
+                    <label class="item item-select">
+                        <span class="input-label">Type</span>
+                        <select>
+                            <option>Normal Sound</option>
+                            <option>Background Music</option>
+                            <option>3D Sound</option>
+                            <option>Use Multimedia Player</option>
+                        </select>
+                    </label>
+                    <ion-item class="range range-positive">Position
+                        <input type="range" value="50" min="0" max="100">
+                    </ion-item>
+                    <ion-item class="range range-positive">Volume
+                        <input type="range" value="50" min="0" max="100">
+                    </ion-item>
+                    <ion-item class="range range-positive">Pan
+                        <input type="range" value="50" min="0" max="100">
+                    </ion-item>
+                </form>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Effects</div>
+            <div class="item item-body">
+                <form class="list">
+                    <ion-toggle toggle-class="toggle-positive">Chorus</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive">Flanger</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive">Reverb</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive">Echo</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive">Gargle</ion-toggle>
+                </form>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Format</div>
+            <div class="item item-body">
+                <form class="list">
+                    <label class="item item-select">
+                        <span class="input-label">Type</span>
+                        <select>
+                            <option>Mono</option>
+                            <option>8</option>
+                        </select>
+                    </label>
+                    <label class="item item-select">
+                        <span class="input-label">Sample rate</span>
+                        <select>
+                            <option>Mono</option>
+                            <option>8</option>
+                        </select>
+                    </label>
+                    <label class="item item-select">
+                        <span class="input-label">Bit</span>
+                        <select>
+                            <option>Mono</option>
+                            <option>8</option>
+                        </select>
+                    </label>
+                    <label class="item item-select">
+                        <span class="input-label">Select</span>
+                        <select>
+                            <option>Mono</option>
+                            <option>8</option>
+                        </select>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

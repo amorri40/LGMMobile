@@ -1,0 +1,64 @@
+<ion-view title="Path Editor" id="page12">
+    <ion-content padding="true" class="has-header">
+        <div class="list card">
+            <div class="item item-divider">View</div>
+            <div class="item item-body">
+                <div style="line-height: 250px; border: 1px solid rgb(238, 238, 238); border-radius: 3px; text-align: center; background-color: rgb(255, 255, 255);">
+                    <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
+                </div>
+                <ion-list>
+                    <label class="item item-select">
+                        <span class="input-label">Room</span>
+                        <select>
+                            <option>rm_1</option>
+                        </select>
+                    </label>
+                </ion-list>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Details</div>
+            <div class="item item-body">
+                <form class="list">
+                    <label class="item item-input">
+                        <span class="input-label">Name:</span>
+                        <input type="text" placeholder="pth_1">
+                    </label>
+                    <ion-toggle toggle-class="toggle-positive">Smooth</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive">Closed</ion-toggle>
+                    <label class="item item-input">
+                        <span class="input-label">Precision</span>
+                        <input type="text" placeholder="4">
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Points</div>
+            <div class="item item-body">
+                <form class="list">
+                    <label class="item item-select">
+                        <span class="input-label">Point</span>
+                        <select>
+                            <option>1 (x:10 y:10 sp:1)</option>
+                            <option>2 (x:10 y:10 sp:1)</option>
+                            <option>3 (x:10 y:10 sp:1)</option>
+                        </select>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">X</span>
+                        <input type="text" placeholder="0">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Y</span>
+                        <input type="text" placeholder="0">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Speed</span>
+                        <input type="text" placeholder="0">
+                    </label>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

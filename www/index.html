@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <style type="text/css">
+      .platform-ios .manual-ios-statusbar-padding{
+        padding-top:20px;
+      }
+    </style>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
+
+    <!-- Only required for Tab projects w/ pages in multiple tabs 
+    <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
+    -->
+
+  </head>
+  <body ng-app="app" animation="slide-left-right-ios7">
+  <div>
+    <ion-side-menus enable-menu-with-back-views="false" data-componentid="side-menu21">
+        <ion-side-menu-content>
+            <ion-nav-bar class="bar-stable">
+                <ion-nav-back-button></ion-nav-back-button>
+                <ion-nav-buttons side="right">
+                    <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+                </ion-nav-buttons>
+            </ion-nav-bar>
+            <ion-nav-view></ion-nav-view>
+        </ion-side-menu-content>
+        <ion-side-menu side="right" id="side-menu21">
+            <ion-header-bar class="bar-stable">
+                <div class="title">Menu</div>
+            </ion-header-bar>
+            <ion-content padding="false" class="side-menu-right has-header">
+                <div class="button-bar" data-componentid="button-bar1"></div>
+                <div class="list card" data-componentid="card3">
+                    <div class="item item-divider">Project</div>
+                    <div class="item item-body">
+                        <div class="button-bar" data-componentid="button-bar2">
+                            <button id="menu-button2" class="button button-positive  button-block" data-componentid="button2">Load</button>
+                            <button id="menu-button3" class="button button-positive  button-block" data-componentid="button3">Save</button>
+                        </div>
+                        <button id="menu-button8" class="button button-dark  button-block button-outline" data-componentid="button8">Game Settings</button>
+                        <button id="menu-button9" class="button button-positive  button-block" data-componentid="button9">Constants</button>
+                        <button id="menu-button10" style="border-radius:0px 0px 0px 0px;" class="button button-dark  button-block button-outline" data-componentid="button10">Game Information</button>
+                        <button id="menu-button11" class="button button-positive  button-block" data-componentid="button11">Extensions</button>
+                    </div>
+                </div>
+            </ion-content>
+        </ion-side-menu>
+    </ion-side-menus>
+</div>
+  </body>
+</html>
