@@ -14,22 +14,28 @@ angular.module('app.controllers', [])
          
 .controller('spritesCtrl', function($scope, $state, $stateParams) {
 
+
 	var plural_name = $stateParams.resource_name+"s";
 
 	if (Object.keys($stateParams.contents).length>0)
 		{
 			$scope.current_folder_contents = {};
 			$scope.current_folder_contents[plural_name] = $stateParams.contents;
+			console.log("plural_name",plural_name,"contents:",$stateParams.contents)
 	}
 	else 
 		$scope.current_folder_contents =  window.global_game_resources[plural_name];
 
 	console.log("current_folder_contents:",$scope.current_folder_contents)
 	$scope.resources_in_folder=window.get_resource_files_in_folder($scope.current_folder_contents, $stateParams.resource_name, 1);
-	$scope.folder_name = $stateParams.folder_name || "Sprites";
+	$scope.folder_name = $stateParams.folder_name;
 
 	$scope.folders = $scope.resources_in_folder[plural_name];
 	$scope.files = $scope.resources_in_folder[$stateParams.resource_name];
+
+	$scope.folder_sref = "tabsController."+plural_name;
+
+	$scope.image="./img/"+$stateParams.resource_name+".svg"
 
 })
    
