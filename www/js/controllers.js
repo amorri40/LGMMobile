@@ -1,7 +1,7 @@
 angular.module('app.controllers', [])
   
 .controller('resourcesCtrl', function($scope) {
-
+	$scope.number_of_resource = window.number_of_resource;
 })
    
 .controller('playCtrl', function($scope) {
@@ -12,8 +12,23 @@ angular.module('app.controllers', [])
 
 })
          
-.controller('spritesCtrl', function($scope) {
+.controller('spritesCtrl', function($scope, $state, $stateParams) {
 
+	// 	$scope.resources_in_folder=[
+	// {name:'New Sprite'},
+	// {name:'spr_one'}
+	// 	];
+
+	if (Object.keys($stateParams.contents).length>0)
+		$scope.current_folder_contents = {sprites:$stateParams.contents};
+	else 
+		$scope.current_folder_contents =  window.global_game_resources;
+
+	console.log("current_folder_contents:",$scope.current_folder_contents)
+	$scope.$stateParams = $stateParams;
+	$scope.current_depth = $stateParams.depth;
+	$scope.resources_in_folder=window.get_resource_files_in_folder($scope.current_folder_contents, "sprite", $scope.current_depth);
+	$scope.folder_name = $stateParams.folder_name || "Sprites";
 })
    
 .controller('pathsCtrl', function($scope) {
@@ -37,6 +52,8 @@ angular.module('app.controllers', [])
 })
    
 .controller('soundsCtrl', function($scope) {
+$scope.current_depth = 2;
+	$scope.resources_in_folder=window.get_resource_files_in_folder(window.global_game_resources, "sound", $scope.current_depth);
 
 })
    

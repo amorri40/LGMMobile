@@ -1,4 +1,4 @@
-<ion-view title="Sprites" id="page5">
+<ion-view title="{{folder_name}} " id="page5" ng-controller="spritesCtrl">
     <ion-content padding="true" class="has-header">
         <form class="list">
             <label class="item item-input">
@@ -7,15 +7,15 @@
             </label>
         </form>
         <ion-list>
-            <ion-item class="item-thumbnail-left" ui-sref="tabsController.spriteEditor">
-                <img>
-                <h2>New Sprite</h2>
-                <p>create a new sprite</p>
+            <ion-item ng-repeat='resource in resources_in_folder.sprites' class="item-thumbnail-left" ui-sref="tabsController.sprites({folder_name:resource.name[0], contents:resource, depth:1})">
+                <img src="./img/sprite.svg">
+                <h2>{{resource.name[0]}} {{id}}</h2>
+                <p>  Folder of Sprites {{resource}} </p>
             </ion-item>
-            <ion-item class="item-thumbnail-left" ui-sref="tabsController.spriteEditor">
-                <img>
-                <h2>2</h2>
-                <p>32x32</p>
+            <ion-item ng-repeat='resource in resources_in_folder.sprite' class="item-thumbnail-left" ui-sref="tabsController.spriteEditor">
+                <img src="./img/sprite.svg">
+                <h2>{{resource}}</h2>
+                <p></p>
             </ion-item>
         </ion-list>
     </ion-content>

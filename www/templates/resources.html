@@ -1,4 +1,4 @@
-<ion-view title="Resources" id="page2">
+<ion-view title="Resources" id="page2" ng-controller="resourcesCtrl">
     <ion-content padding="true" class="has-header">
         <form class="list">
             <label class="item item-input">
@@ -8,54 +8,54 @@
         </form>
         <ion-list>
             <ion-item class="item-thumbnail-left" ui-sref="tabsController.sprites">
-                <img>
+                <img src="./img/sprite.svg">
                 <h2>Sprites</h2>
-                <p>16 sprites</p>
+                <p>{{number_of_resource['sprite']}} sprites</p>
             </ion-item>
             <ion-item class="item-thumbnail-left" ui-sref="tabsController.sounds">
-                <img>
+                <img src="./img/sounds.png">
                 <h2>Sounds</h2>
-                <p>12 sounds</p>
+                <p>{{number_of_resource['sound']}} sounds</p>
             </ion-item>
             <ion-item class="item-thumbnail-left" ui-sref="tabsController.backgrounds">
-                <img>
+                <img src="./img/background.svg">
                 <h2>Backgrounds</h2>
-                <p>6 Backgrounds</p>
+                <p>{{number_of_resource['background']}} Backgrounds</p>
             </ion-item>
             <ion-item class="item-thumbnail-left" ui-sref="tabsController.paths">
-                <img>
+                <img src="./img/path.svg">
                 <h2>Paths</h2>
-                <p>2 Paths</p>
+                <p>{{number_of_resource['path']}} Paths</p>
             </ion-item>
             <ion-item class="item-thumbnail-left" ui-sref="tabsController.scripts">
-                <img>
+                <img src="./img/script.svg">
                 <h2>Scripts</h2>
-                <p>20 Scripts</p>
+                <p>{{number_of_resource['script']}} Scripts</p>
             </ion-item>
             <ion-item class="item-thumbnail-left" ui-sref="tabsController.shaders">
-                <img>
+                <img src="./img/script.svg">
                 <h2>Shaders</h2>
                 <p>0 Shaders</p>
             </ion-item>
             <ion-item class="item-thumbnail-left" ui-sref="tabsController.fonts">
-                <img>
+                <img src="./img/font.svg">
                 <h2>Fonts</h2>
-                <p>1 Font</p>
+                <p>{{number_of_resource['font'] || 0}} Fonts</p>
             </ion-item>
             <ion-item class="item-thumbnail-left" ui-sref="tabsController.timelines">
-                <img>
+                <img src="./img/timeline.svg">
                 <h2>Time Lines</h2>
-                <p>0 Time Lines</p>
+                <p>{{number_of_resource['timeline'] || 0}} Time Lines</p>
             </ion-item>
             <ion-item class="item-thumbnail-left">
-                <img>
+                <img src="./img/object.svg">
                 <h2>Objects</h2>
-                <p>12 objects</p>
+                <p>{{number_of_resource['object'] || 0}} objects</p>
             </ion-item>
             <ion-item class="item-thumbnail-left">
-                <img>
+                <img src="./img/game.svg">
                 <h2>Rooms</h2>
-                <p>2 Rooms</p>
+                <p>{{number_of_resource['room'] || 0}} Rooms</p>
             </ion-item>
         </ion-list>
     </ion-content>

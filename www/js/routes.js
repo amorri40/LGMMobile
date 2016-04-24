@@ -48,6 +48,17 @@ angular.module('app.routes', [])
 
   .state('tabsController.sprites', {
     url: '/listSprites',
+    params: { 
+      folder_name: {
+          value: 'Sprites',
+        },
+        contents: {
+          // value: 'Sprites',
+        },
+        depth: {
+          value:2
+        }
+    },
     views: {
       'tab1': {
         templateUrl: 'templates/sprites.html',
