@@ -14,21 +14,23 @@ angular.module('app.controllers', [])
          
 .controller('spritesCtrl', function($scope, $state, $stateParams) {
 
-	// 	$scope.resources_in_folder=[
-	// {name:'New Sprite'},
-	// {name:'spr_one'}
-	// 	];
+	var plural_name = $stateParams.resource_name+"s";
 
 	if (Object.keys($stateParams.contents).length>0)
-		$scope.current_folder_contents = {sprites:$stateParams.contents};
+		{
+			$scope.current_folder_contents = {};
+			$scope.current_folder_contents[plural_name] = $stateParams.contents;
+	}
 	else 
-		$scope.current_folder_contents =  window.global_game_resources;
+		$scope.current_folder_contents =  window.global_game_resources[plural_name];
 
 	console.log("current_folder_contents:",$scope.current_folder_contents)
-	$scope.$stateParams = $stateParams;
-	$scope.current_depth = $stateParams.depth;
-	$scope.resources_in_folder=window.get_resource_files_in_folder($scope.current_folder_contents, "sprite", $scope.current_depth);
+	$scope.resources_in_folder=window.get_resource_files_in_folder($scope.current_folder_contents, $stateParams.resource_name, 1);
 	$scope.folder_name = $stateParams.folder_name || "Sprites";
+
+	$scope.folders = $scope.resources_in_folder[plural_name];
+	$scope.files = $scope.resources_in_folder[$stateParams.resource_name];
+
 })
    
 .controller('pathsCtrl', function($scope) {

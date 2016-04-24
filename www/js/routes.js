@@ -2,6 +2,36 @@ angular.module('app.routes', [])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
+
+  function createState(resource_name) {
+    var plural_name = resource_name+"s";
+
+        $stateProvider.state('tabsController.'+plural_name, {
+        url: '/list'+plural_name,
+        params: { 
+          folder_name: {
+              value: plural_name,
+            },
+            contents: {
+            },
+            resource_name: {
+              value: resource_name
+            }
+        },
+        views: {
+          'tab1': {
+            templateUrl: 'templates/sprites.html',
+            controller: 'spritesCtrl'
+          }
+        }
+      })
+  }
+
+var resource_types = ["sprite","sound", "background", "path","script","shader","font","timeline","object","room"]
+  _.each(resource_types,createState)
+
+  
+
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
@@ -46,108 +76,11 @@ angular.module('app.routes', [])
     abstract:true
   })
 
-  .state('tabsController.sprites', {
-    url: '/listSprites',
-    params: { 
-      folder_name: {
-          value: 'Sprites',
-        },
-        contents: {
-          // value: 'Sprites',
-        },
-        depth: {
-          value:2
-        }
-    },
-    views: {
-      'tab1': {
-        templateUrl: 'templates/sprites.html',
-        controller: 'spritesCtrl'
-      }
-    }
-  })
+ 
 
-  .state('tabsController.paths', {
-    url: '/page11',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/paths.html',
-        controller: 'pathsCtrl'
-      }
-    }
-  })
+  
 
-  .state('tabsController.scripts', {
-    url: '/page13',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/scripts.html',
-        controller: 'scriptsCtrl'
-      }
-    }
-  })
-
-  .state('tabsController.shaders', {
-    url: '/page15',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/shaders.html',
-        controller: 'shadersCtrl'
-      }
-    }
-  })
-
-  .state('tabsController.timelines', {
-    url: '/page20',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/timelines.html',
-        controller: 'timelinesCtrl'
-      }
-    }
-  })
-
-  .state('tabsController.fonts', {
-    url: '/page17',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/fonts.html',
-        controller: 'fontsCtrl'
-      }
-    }
-  })
-
-  .state('tabsController.sounds', {
-    url: '/page6',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/sounds.html',
-        controller: 'soundsCtrl'
-      }
-    }
-  })
-
-  .state('tabsController.backgrounds', {
-    url: '/page9',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/backgrounds.html',
-        controller: 'backgroundsCtrl'
-      }
-    }
-  })
-
-  .state('objects', {
-    url: '/page25',
-    templateUrl: 'templates/objects.html',
-    controller: 'objectsCtrl'
-  })
-
-  .state('rooms', {
-    url: '/page26',
-    templateUrl: 'templates/rooms.html',
-    controller: 'roomsCtrl'
-  })
+ 
 
   .state('instances', {
     url: '/page28',

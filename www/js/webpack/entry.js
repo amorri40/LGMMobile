@@ -54,10 +54,10 @@ window.get_number_of_specific_resource = function(game_resources, specific_resou
 // 
 window.get_resource_files_in_folder = function(game_resources, specific_resource, target_depth) {
 	console.error("get_resource_files_in_folder",game_resources, specific_resource);
-	var resources_in_folder;
+	var resources_in_folder={};
 	var get_list_of_resources_to_show = function(folder_name, resource, property_name,depth) {
-		console.log("Resource",resource, folder_name,depth)
-		if (depth !== target_depth) return;
+		console.log("Found Resource",resource, folder_name,depth, depth !== target_depth)
+		if (depth > target_depth) return;
 		
 		resources_in_folder=resource;
 	}

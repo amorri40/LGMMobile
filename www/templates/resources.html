@@ -13,7 +13,7 @@
                 <p>{{number_of_resource['sprite']}} sprites</p>
             </ion-item>
             <ion-item class="item-thumbnail-left" ui-sref="tabsController.sounds">
-                <img src="./img/sounds.png">
+                <img src="./img/sound.png">
                 <h2>Sounds</h2>
                 <p>{{number_of_resource['sound']}} sounds</p>
             </ion-item>
@@ -47,12 +47,12 @@
                 <h2>Time Lines</h2>
                 <p>{{number_of_resource['timeline'] || 0}} Time Lines</p>
             </ion-item>
-            <ion-item class="item-thumbnail-left">
+            <ion-item class="item-thumbnail-left" ui-sref="tabsController.objects">
                 <img src="./img/object.svg">
                 <h2>Objects</h2>
                 <p>{{number_of_resource['object'] || 0}} objects</p>
             </ion-item>
-            <ion-item class="item-thumbnail-left">
+            <ion-item class="item-thumbnail-left" ui-sref="tabsController.rooms">
                 <img src="./img/game.svg">
                 <h2>Rooms</h2>
                 <p>{{number_of_resource['room'] || 0}} Rooms</p>
