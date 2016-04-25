@@ -100,6 +100,12 @@ var resource_types = ["sprite","sound", "background", "path","script","shader","
 
   .state('tabsController.spriteEditor', {
     url: '/page7',
+    params: {
+      resource_name: {
+        value:"",
+        squash: true
+      }
+    },
     views: {
       'tab1': {
         templateUrl: 'templates/spriteEditor.html',

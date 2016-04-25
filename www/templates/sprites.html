@@ -12,7 +12,7 @@
                 <h2>{{resource.name[0]}}</h2>
                 <p> Folder {{resource}} </p>
             </ion-item>
-            <ion-item ng-repeat='resource in files' class="item-thumbnail-left" ui-sref="tabsController.spriteEditor">
+            <ion-item ng-repeat='resource in files' class="item-thumbnail-left" ui-sref="{{editor}}({resource_name:resource})">
                 <img ng-src="{{image}}">
                 <h2>{{resource}}</h2>
                 <p></p>

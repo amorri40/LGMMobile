@@ -37,6 +37,8 @@ angular.module('app.controllers', [])
 
 	$scope.image="./img/"+$stateParams.resource_name+".svg"
 
+	$scope.editor="tabsController."+$stateParams.resource_name+"Editor"
+
 })
    
 .controller('pathsCtrl', function($scope) {
@@ -85,8 +87,17 @@ $scope.current_depth = 2;
 
 })
    
-.controller('spriteEditorCtrl', function($scope) {
-	$scope.name="Ali"
+.controller('spriteEditorCtrl', function($scope, $stateParams) {
+	$scope.name="Ali";
+	var name;
+	if ($stateParams.resource_name)
+	{name = $stateParams.resource_name.replace("sprites\\","");
+		$scope.title =  name || "Edit Sprite";
+		$scope.resource = window.getResourceFromFileName($stateParams.resource_name, "sprite")['sprite'];
+		console.log($scope.resource);
+		$scope.image = window.get_image_for_sprite($scope.resource);
+		console.log($scope.image);
+	}
 })
    
 .controller('pathEditorCtrl', function($scope) {
